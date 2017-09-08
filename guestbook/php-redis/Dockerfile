@@ -19,6 +19,7 @@ ENV https_proxy http://proxy.sdc.hp.com:8080/
 
 RUN apt-get update
 RUN apt-get install -y php-pear
+RUN pear config-set http_proxy http://proxy.sdc.hp.com:8080
 RUN pear channel-discover pear.nrk.io
 RUN pear install nrk/Predis
 
