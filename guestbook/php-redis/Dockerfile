@@ -14,6 +14,9 @@
 
 FROM php:5-apache
 
+ENV http_proxy http://proxy.sdc.hp.com:8080/
+ENV https_proxy http://proxy.sdc.hp.com:8080/
+
 RUN apt-get update
 RUN apt-get install -y php-pear
 RUN pear channel-discover pear.nrk.io
@@ -29,3 +32,6 @@ RUN sed -i 's#CustomLog /proc/self/fd/1 combined#CustomLog "|/bin/cat" combined#
 ADD guestbook.php /var/www/html/guestbook.php
 ADD controllers.js /var/www/html/controllers.js
 ADD index.html /var/www/html/index.html
+
+ENV http_proxy ""
+ENV https_proxy ""
