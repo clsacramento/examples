@@ -1,9 +1,8 @@
 node {
     
-    environment {
+    environment
         http_proxy = 'http://proxy.sdc.hp.com:8080/'
         https_proxy ='http://proxy.sdc.hp.com:8080/'
-    }
 
     checkout scm
 
