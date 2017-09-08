@@ -1,4 +1,7 @@
 node {
+    
+    export http_proxy=http://proxy.sdc.hp.com:8080/
+    export https_proxy=http://proxy.sdc.hp.com:8080/
 
     checkout scm
 
