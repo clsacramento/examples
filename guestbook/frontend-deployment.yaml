@@ -2,7 +2,6 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: frontend
-  namespace: demo
 spec:
   replicas: 3
   template:
